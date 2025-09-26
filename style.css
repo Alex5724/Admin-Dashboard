@@ -20,6 +20,8 @@ body{
 .container{
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr 2fr 2fr 1fr;
+    width: inherit;
+    height: inherit;
 }
 .sidebar{
     display: grid;
@@ -39,7 +41,7 @@ ul{
     margin-left: 20px;
     font-weight: 600;
 }
-img[src$=".svg"]{
+.sidebar img[src$=".svg"]{
     width: 25px;
     height: 25px;
     position: relative;
@@ -49,7 +51,7 @@ h3{
     margin-left: 80px;
     font-size: 2rem;
 }
-img[src$="view-dashboard.svg"]{
+.sidebar img[src$="view-dashboard.svg"]{
     width: 50px;
     height: 50px;
     position: absolute;
@@ -61,5 +63,59 @@ li{
   align-items: center;
   margin-top: 15px;
   font-family: var(--web-font);
+}
+.header{
+    display: grid;
+    grid-template: repeat(2, 1fr) / 1fr;
+    grid-column: 2 / 5;
+    grid-row: span 1;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 
+}
+#header-1 > #search-bar > input{
+    background-color: #e4ecf4;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    width: clamp(200px, 1rem + 40vw ,600px);
+    height: 1.5rem;
+    font-family: var(--web-font);
+    font-weight: 600;
+}
+#search-bar{
+    width: 70%;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 50px;
+}
+#search-bar img[src$=".svg"]{
+    width: 25px;
+    height: 25px;
+}
+#notification-account{
+    width: 30%;
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+    padding-right: 50px;
+}
+#notification-account > img[src$=".svg"]{
+    width: 25px;
+    height: 25px;
+}
+#notification-account > img[src$="916093c6b2dd.jpg"]{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+#header-1{
+    display: flex;
+    flex-direction: row;
+}
+#notification-account > span{
+    font-family: var(--web-font);
+    font-weight: 600;
+    font-size: 1.3rem;
 }
