@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url("./fonts/Roboto-Regular.woff2") format('woff2');
+    font-display: swap;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+:root{
+    --web-font: Roboto;
+    --sidebar-button-color: rgb(0, 166, 255);
+    --projects-sidebar-color: #f4b42c;
+}
+.container{
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr 2fr 2fr 1fr;
+}
+.sidebar{
+    display: grid;
+    grid-template: 1fr repeat(2, 2fr) / 1fr;
+    grid-column: span 1;
+    grid-row: span 4;
+    background-color: var(--sidebar-button-color);
+    color: white;
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: var(--web-font);
+    position: relative;
+}
+ul{
+    list-style: none;
+    margin-left: 20px;
+    font-weight: 600;
+}
+img[src$=".svg"]{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    right: 25px;
+}
+h3{
+    margin-left: 80px;
+    font-size: 2rem;
+}
+img[src$="view-dashboard.svg"]{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 25px;
+    right: 180px;
+}
+li{
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-family: var(--web-font);
+
+}
