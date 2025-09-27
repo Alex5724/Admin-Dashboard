@@ -19,7 +19,7 @@ body{
 }
 .container{
     display: grid;
-    grid-template: repeat(4, 1fr) / 1fr 2fr 2fr 1fr;
+    grid-template: repeat(5, 1fr) / 1fr 2fr 2fr 1fr;
     width: inherit;
     height: inherit;
 }
@@ -27,7 +27,7 @@ body{
     display: grid;
     grid-template: 1fr repeat(2, 2fr) / 1fr;
     grid-column: span 1;
-    grid-row: span 4;
+    grid-row: 1 / -1;
     background-color: var(--sidebar-button-color);
     color: white;
     margin: 0;
@@ -71,6 +71,7 @@ li{
     grid-row: span 1;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
     height: 200px;
+    position: relative;
 }
 #header-1 > #search-bar > input{
     background-color: #e4ecf4;
@@ -141,7 +142,7 @@ li{
 }
 #account-presentation >  p{
     font-family: var(--web-font);
-    font-weight: 600;
+    font-weight: 900;
     font-size: 1.5rem;
 }
 #account-presentation >  p > span{
@@ -164,4 +165,61 @@ li{
     background-color: var(--sidebar-button-color);
     font-weight: 600;
     color: white;
+}
+.content{
+    display: grid;
+    grid-template: 1fr repeat(3, 2fr)/  repeat(auto-fit, minmax(300px, 400px));
+    grid-column: 2 / 4;
+    grid-row: 2 / 6;
+    background-color: #e4ecf4;
+    gap: 30px 30px;
+    max-width: 100%;  
+    min-width: 300px;
+    width: fit-content;
+    justify-items: start;
+    padding-left: 30px;
+    overflow-x: auto;
+}
+.content > h3{
+    grid-column: 1 / -1;
+    margin: 0;
+    padding: 0;
+    justify-self: start;
+    align-self: flex-end;
+    font-family: var(--web-font);
+    font-size: 1.5rem;
+    padding-top: 40px;
+}
+.content > .project{
+    font-family: var(--web-font);
+    background-color: white;
+    border-radius: 15px;
+    height: 250px;
+    color: rgb(85, 85, 85);
+    padding: 30px 20px;
+    border-left: 15px solid #f4b42c;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.2);
+}
+.content > .project > p > span{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 900;
+    line-height: 40px;
+}
+.content::-webkit-scrollbar {
+    display: none;
+}
+.project > #project-icons > img[src$=".svg"]{
+    width: 25px;
+    height: 25px;
+}
+.project > #project-icons{
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+.project{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
