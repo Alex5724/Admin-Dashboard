@@ -59,10 +59,10 @@ h3{
     right: 180px;
 }
 li{
-  display: flex;
-  align-items: center;
-  margin-top: 15px;
-  font-family: var(--web-font);
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    font-family: var(--web-font);
 }
 .header{
     display: grid;
@@ -70,7 +70,7 @@ li{
     grid-column: 2 / 5;
     grid-row: span 1;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
-
+    height: 200px;
 }
 #header-1 > #search-bar > input{
     background-color: #e4ecf4;
@@ -113,9 +113,55 @@ li{
 #header-1{
     display: flex;
     flex-direction: row;
+    width: 100%;
+    height: 100%;
 }
 #notification-account > span{
     font-family: var(--web-font);
     font-weight: 600;
     font-size: 1.3rem;
+}
+#account-presentation{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 50px;
+    gap: 20px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+#account-presentation >  img[src$="916093c6b2dd.jpg"]{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+}
+#header-2{
+    display: flex;
+    flex-direction: row;
+}
+#account-presentation >  p{
+    font-family: var(--web-font);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+#account-presentation >  p > span{
+    font-size: 1rem;
+}
+#header-2 >  #buttons{
+    width: 40%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+}
+#header-2 >  #buttons > button{
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 8rem;
+    height: 2rem;
+    font-family: var(--web-font);
+    background-color: var(--sidebar-button-color);
+    font-weight: 600;
+    color: white;
 }
